@@ -1,38 +1,63 @@
-.App {
+body {
+  font-family: "Poppins", sans-serif;
+
+}
+
+.headline {
+  font-size: 15vw;
+  text-transform: uppercase;
   text-align: center;
+
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 600;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.lineParents{
+  overflow: hidden;
+}
+.lineChildren{
+  transform: translate(0, 500px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.featured-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.featured-section img {
+  clip-path: inset(0% 100% 0% 0%);
+  transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.featured-section img.is-reveal  {
+  clip-path: inset(0% 0% 0% 0%);
+  transform: scale(0.5);
+
 }
+
+.featured-section h6 {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.featured-row-layout,
+.featured-column-layout {
+  display: grid;
+  gap: 10px;
+}
+
+.featured-row-layout {
+  grid-template-rows: repeat(2, auto);
+}
+
+.featured-row-layout img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+
